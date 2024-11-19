@@ -3,7 +3,8 @@ provider "azurerm" {
   subscription_id = var.subscription_id
 }
 
-resource "azurerm_resource_group" "main" {
-  name     = var.resource_group_name
-  location = var.resource_group_location
+module "resource_group" {
+  source                  = "./modules/ressource_group"
+  resource_group_name     = var.resource_group_name
+  resource_group_location = var.resource_group_location
 }
