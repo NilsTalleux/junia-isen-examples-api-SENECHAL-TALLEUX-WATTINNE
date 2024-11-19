@@ -1,3 +1,3 @@
-subscription_id         = ""                     # Azure subscription ID. Use 'az login' command to get it.
+subscription_id         = ""                        # Azure subscription ID. Use 'az login' command to get it.
 resource_group_name     = "Cloud-Computing-Project" # Optional: name of the resource group (default: Cloud-Computing-Project)
 resource_group_location = "France Central"          # Optional: Resource group location (default: France Central)
