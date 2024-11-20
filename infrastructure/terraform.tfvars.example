@@ -5,3 +5,8 @@ resource_group_location = "France Central"          # Optional: Resource group l
 # Only contain alphanumeric characters and dashes,
 # up to 60 characters in length and MUST BE UNIQUE
 app_service_name        = "LinuxWebApppcntbw"       # Optional: name of the app-service 
+
+db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL server (MUST BE UNIQUE)
+db_admin_username       = "adm"                     # Admin username for the PostgreSQL server
+db_admin_password       = "notasafepasswd"          # Admin password for the PostgreSQL server
+db_name                 = "mySuperDatabase"         # Optional : database name

@@ -20,6 +20,11 @@ resource_group_location = "France Central"          # Optional: Resource group l
 # up to 60 characters in length and MUST BE UNIQUE
 # More info: https://learn.microsoft.com/en-us/answers/questions/1150735/app-service-name-is-not-available-only-for-some-te?orderBy=Newest
 app_service_name        = "LinuxWebApppcntbw"       # Optional: name of the app-service
+
+db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL server (MUST BE UNIQUE)
+db_admin_username       = "adm"                     # Admin username for the PostgreSQL server
+db_admin_password       = "notasafepasswd"          # Admin password for the PostgreSQL server
+db_name                 = "mySuperDatabase"         # Optional : database name
 ```
 
 
