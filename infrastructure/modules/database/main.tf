@@ -10,7 +10,7 @@ resource "azurerm_postgresql_flexible_server" "postgresql_server" {
   geo_redundant_backup_enabled  = false
   sku_name                      = "B_Standard_B1ms" # Performance level (basic here)
   storage_tier                  = "P4"
-  storage_mb                    = "10240"           # Size allocated for storage in megabytes (10 GB here)
+  storage_mb                    = "32768"           # Size allocated for storage in megabytes (32 GB here)
   version                       = "16" 
   public_network_access_enabled = false             # Firewall
 }
