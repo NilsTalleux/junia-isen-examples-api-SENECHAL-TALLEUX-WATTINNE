@@ -1,3 +1,7 @@
 subscription_id         = ""                        # Azure subscription ID. Use 'az login' command to get it.
 resource_group_name     = "Cloud-Computing-Project" # Optional: name of the resource group (default: Cloud-Computing-Project)
 resource_group_location = "France Central"          # Optional: Resource group location (default: France Central)
+
+# Only contain alphanumeric characters and dashes,
+# up to 60 characters in length and MUST BE UNIQUE
+app_service_name        = "LinuxWebApppcntbw"       # Optional: name of the app-service 
