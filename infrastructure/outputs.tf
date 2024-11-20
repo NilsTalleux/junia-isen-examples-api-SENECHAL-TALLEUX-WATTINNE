@@ -17,3 +17,13 @@ output "app_service_url" {
   description = "The default hostname of the App Service"
   value       = module.app_service.app_service_url
 }
+
+output "database_url" {
+  description = "The database URL"
+  value       = module.database.db_server_fqdn
+}
+
+output "database_port" {
+  description = "The database port"
+  value       = module.database.db_server_port
+}

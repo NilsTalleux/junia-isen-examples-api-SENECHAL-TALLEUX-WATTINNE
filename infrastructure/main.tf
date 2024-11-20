@@ -18,7 +18,7 @@ module "app_service" {
   pricing_plan          = var.app_service_pricing_plan
 }
 
-module "postgresql" {
+module "database" {
   source              = "./modules/database"
   server_name         = var.db_server_name
   location            = module.resource_group.resource_group_location
