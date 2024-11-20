@@ -15,6 +15,10 @@ You need to install:
 - [uv](https://docs.astral.sh/uv/guides/install-python/)
 - you must have a PostgreSQL instance available with an `example` table
 
+## Run the infrastructure
+
+See [here](https://github.com/NilsTalleux/junia-isen-examples-api-SENECHAL-TALLEUX-WATTINNE/blob/main/infrastructure/README.md)
+
 ## Installation
 
 ```shell
