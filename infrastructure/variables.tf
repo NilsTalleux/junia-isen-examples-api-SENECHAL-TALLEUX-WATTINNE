@@ -32,3 +32,25 @@ variable "app_service_pricing_plan" {
   type        = string
   default     = "F1" # Basic free plan
 }
+
+variable "db_server_name" {
+  description = "The name of the PostgreSQL server (MUST BE UNIQUE)."
+  type        = string
+}
+
+variable "db_admin_username" {
+  description = "Administrator username for the PostgreSQL server."
+  type        = string
+}
+
+variable "db_admin_password" {
+  description = "Administrator password for the PostgreSQL server."
+  type        = string
+  sensitive   = true
+}
+
+variable "db_name" {
+  description = "The name of the PostgreSQL database."
+  type        = string
+  default     = "mydatabase"
+}

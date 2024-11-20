@@ -17,3 +17,13 @@ module "app_service" {
   location              = module.resource_group.resource_group_location
   pricing_plan          = var.app_service_pricing_plan
 }
+
+module "postgresql" {
+  source              = "./modules/database"
+  server_name         = var.db_server_name
+  location            = module.resource_group.resource_group_location
+  resource_group_name = module.resource_group.resource_group_name
+  admin_username      = var.db_admin_username
+  admin_password      = var.db_admin_password
+  database_name       = var.db_name
+}
