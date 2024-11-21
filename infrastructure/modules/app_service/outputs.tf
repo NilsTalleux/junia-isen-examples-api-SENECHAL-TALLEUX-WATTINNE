@@ -1,4 +1,9 @@
-output "app_service_url" {
-  description = "The default hostname of the Linux App Service"
-  value       = azurerm_linux_web_app.linux_web_app.default_hostname
+output "url" {
+  value = "https://${azurerm_linux_web_app.app_service.default_hostname}/"
+  description = "Hostname to connect to the app service"
+}
+
+output "principal_id" {
+  value = azurerm_linux_web_app.app_service.identity[0].principal_id
+  description = "Principal ID of the API App service's managed identity"
 }

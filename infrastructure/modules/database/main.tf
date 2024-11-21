@@ -13,6 +13,21 @@ resource "azurerm_postgresql_flexible_server" "postgresql_server" {
   storage_mb                    = "32768"           # Size allocated for storage in megabytes (32 GB here)
   version                       = "16" 
   public_network_access_enabled = false             # Firewall
+
+  authentication {
+    active_directory_auth_enabled = true
+    password_auth_enabled         = true
+    tenant_id                     = var.entra_administrator_tenant_id
+  }
+}
+
+resource "azurerm_postgresql_flexible_server_active_directory_administrator" "administrator" {
+  tenant_id           = var.entra_administrator_tenant_id
+  resource_group_name = var.resource_group_name
+  server_name         = azurerm_postgresql_flexible_server.playground_computing.name
+  principal_type      = var.entra_administrator_principal_type
+  object_id           = var.entra_administrator_object_id
+  principal_name      = var.entra_administrator_principal_name
 }
 
 resource "azurerm_postgresql_flexible_server_database" "database" {

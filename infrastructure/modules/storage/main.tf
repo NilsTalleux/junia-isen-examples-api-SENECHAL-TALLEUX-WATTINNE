@@ -11,3 +11,15 @@ resource "azurerm_storage_container" "blob_container" {
   storage_account_id    = azurerm_storage_account.storage_account.id
   container_access_type = "private"
 }
+
+resource "azurerm_role_assignment" "service_binding" {
+  scope                = resource.azurerm_storage_container.blob_container.resource_manager_id
+  role_definition_name = "Storage Blob Data Reader"
+  principal_id         = var.service_principal_id
+}
+
+resource "azurerm_role_assignment" "user_binding" {
+  scope                = resource.azurerm_storage_container.blob_container.resource_manager_id
+  role_definition_name = "Storage Blob Data Reader"
+  principal_id         = var.user_principal_id
+}

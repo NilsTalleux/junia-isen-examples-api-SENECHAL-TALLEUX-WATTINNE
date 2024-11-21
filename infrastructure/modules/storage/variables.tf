@@ -18,3 +18,15 @@ variable "container_name" {
   type        = string
   default     = "default-container"
 }
+
+variable "user_principal_id" {
+  type        = string
+  default     = null
+  description = "Principal ID of the user to assign the blob storage reader role to"
+}
+
+variable "service_principal_id" {
+  type        = string
+  default     = null
+  description = "Principal ID of the app service to assign the blob storage reader role to"
+}

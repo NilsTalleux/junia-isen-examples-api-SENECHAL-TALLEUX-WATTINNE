@@ -1,8 +1,3 @@
-output "postgresql_server_id" {
-  description = "The ID of the PostgreSQL server"
-  value       = azurerm_postgresql_flexible_server.postgresql_server.id
-}
-
 output "db_server_fqdn" {
   description = "The fully qualified domain name of the PostgreSQL server"
   value       = azurerm_postgresql_flexible_server.postgresql_server.fqdn

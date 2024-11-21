@@ -23,3 +23,19 @@ variable "pricing_plan" {
   type        = string
   default     = "F1"
 }
+
+variable "docker_image" {
+  type = string
+  nullable = false
+}
+
+variable "docker_registry_url" {
+  type = string
+  default = "https://index.docker.io"
+}
+
+variable "app_settings" {
+  description = "App service settings (list of environment variables)"
+  default = {}
+  type = map(string)
+}
