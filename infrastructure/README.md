@@ -1,5 +1,7 @@
 ## Run the infrastructure
 
+# Storage not tested ! (run `terraform apply` & check if everything is ok *(`terraform validate` & `terraform plan` are both ok)*)
+
 # Prerequisites
 
 Make sure you have terraform installed (you can check with `terraform -version`).
@@ -25,6 +27,9 @@ db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL ser
 db_admin_username       = "adm"                     # Admin username for the PostgreSQL server
 db_admin_password       = "notasafepasswd"          # Admin password for the PostgreSQL server
 db_name                 = "mySuperDatabase"         # Optional : database name
+
+storage_account_name    = "storageaccountccppsntbw" # Optional : name of the Storage Account (MUST BE UNIQUE)
+storage_container_name  = "storageccppsntbw"        # Optional : name of the Storage Container within the Storage Account
 ```
 
 

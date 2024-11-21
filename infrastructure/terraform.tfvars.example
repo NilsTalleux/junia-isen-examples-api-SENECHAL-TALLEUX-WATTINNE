@@ -10,3 +10,6 @@ db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL ser
 db_admin_username       = "adm"                     # Admin username for the PostgreSQL server
 db_admin_password       = "notasafepasswd"          # Admin password for the PostgreSQL server
 db_name                 = "mySuperDatabase"         # Optional : database name
+
+storage_account_name    = "storageaccountccppsntbw" # Optional : name of the Storage Account (MUST BE UNIQUE)
+storage_container_name  = "storageccppsntbw"        # Optional : name of the Storage Container within the Storage Account
