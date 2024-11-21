@@ -27,3 +27,11 @@ module "database" {
   admin_password      = var.db_admin_password
   database_name       = var.db_name
 }
+
+module "storage" {
+  source                 = "./modules/storage"
+  storage_account_name   = var.storage_account_name
+  resource_group_name    = module.resource_group.resource_group_name
+  location               = module.resource_group.resource_group_location
+  container_name         = var.storage_container_name
+}

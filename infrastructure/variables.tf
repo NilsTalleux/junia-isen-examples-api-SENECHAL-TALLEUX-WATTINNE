@@ -54,3 +54,15 @@ variable "db_name" {
   type        = string
   default     = "mydatabase"
 }
+
+variable "storage_account_name" {
+  description = "The name of the Storage Account. (MUST BE UNIQUE)"
+  type        = string
+  default     = "storageaccountccppsntbw"
+}
+
+variable "storage_container_name" {
+  description = "The name of the Storage Container within the Storage Account."
+  type        = string
+  default     = "storageccppsntbw"
+}
