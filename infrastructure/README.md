@@ -1,7 +1,5 @@
 ## Run the infrastructure
 
-# Storage not tested ! (run `terraform apply` & check if everything is ok *(`terraform validate` & `terraform plan` are both ok)*)
-
 # Prerequisites
 
 Make sure you have terraform installed (you can check with `terraform -version`).
