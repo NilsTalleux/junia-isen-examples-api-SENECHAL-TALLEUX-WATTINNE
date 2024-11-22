@@ -6,9 +6,12 @@ provider "azurerm" {
   subscription_id = var.subscription_id
 }
 
+# Entra disabled due to authorization problem
+/*
 data "azuread_user" "user" {
   user_principal_name = var.email_address
 }
+*/
 
 data "github_user" "user" {
   username = var.github_handle
@@ -54,10 +57,13 @@ module "database" {
   location            = module.resource_group.resource_group_location
   resource_group_name = module.resource_group.resource_group_name
 
+  # Entra disabled due to authorization problem
+  /*
   entra_administrator_tenant_id      = data.azurerm_subscription.current.tenant_id
   entra_administrator_object_id      = data.azuread_user.user.object_id
   entra_administrator_principal_type = "User"
   entra_administrator_principal_name = data.azuread_user.user.user_principal_name
+  */
 
   server_name         = var.db_server_name
   admin_username      = var.db_admin_username
@@ -81,7 +87,10 @@ module "storage" {
   container_name         = var.storage_container_name
 
   service_principal_id = var.enable_storage_read_for_api ? module.app_service[0].principal_id : null
-  user_principal_id    = var.enable_storage_read_for_user ? data.azuread_user.user.object_id : null
+  user_principal_id    = null
+  
+  # Entra disabled due to authorization problem
+  #user_principal_id    = var.enable_storage_read_for_user ? data.azuread_user.user.object_id : null
 }
 
 locals {

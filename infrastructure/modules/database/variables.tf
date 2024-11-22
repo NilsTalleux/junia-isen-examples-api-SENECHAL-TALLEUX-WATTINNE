@@ -36,6 +36,8 @@ variable "database_collation" {
   default     = "en_US.utf8"
 }
 
+# Entra disabled due to authorization problem
+/*
 variable "entra_administrator_tenant_id" {
   type = string
   nullable = false
@@ -59,3 +61,4 @@ variable "entra_administrator_principal_name" {
   nullable = false
   description = "Microsoft Entra entity name"
 }
+*/

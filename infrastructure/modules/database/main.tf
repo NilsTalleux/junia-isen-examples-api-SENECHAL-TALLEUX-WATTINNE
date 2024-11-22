@@ -14,13 +14,17 @@ resource "azurerm_postgresql_flexible_server" "postgresql_server" {
   version                       = "16" 
   public_network_access_enabled = false             # Firewall
 
+  /*
   authentication {
     active_directory_auth_enabled = true
     password_auth_enabled         = true
     tenant_id                     = var.entra_administrator_tenant_id
   }
+  */
 }
 
+# Disabled due to error (authorization)
+/*
 resource "azurerm_postgresql_flexible_server_active_directory_administrator" "administrator" {
   tenant_id           = var.entra_administrator_tenant_id
   resource_group_name = var.resource_group_name
@@ -29,6 +33,7 @@ resource "azurerm_postgresql_flexible_server_active_directory_administrator" "ad
   object_id           = var.entra_administrator_object_id
   principal_name      = var.entra_administrator_principal_name
 }
+*/
 
 resource "azurerm_postgresql_flexible_server_database" "database" {
   name      = var.database_name
