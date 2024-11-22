@@ -24,7 +24,7 @@ resource "azurerm_postgresql_flexible_server" "postgresql_server" {
 resource "azurerm_postgresql_flexible_server_active_directory_administrator" "administrator" {
   tenant_id           = var.entra_administrator_tenant_id
   resource_group_name = var.resource_group_name
-  server_name         = azurerm_postgresql_flexible_server.playground_computing.name
+  server_name         = azurerm_postgresql_flexible_server.postgresql_server.name
   principal_type      = var.entra_administrator_principal_type
   object_id           = var.entra_administrator_object_id
   principal_name      = var.entra_administrator_principal_name

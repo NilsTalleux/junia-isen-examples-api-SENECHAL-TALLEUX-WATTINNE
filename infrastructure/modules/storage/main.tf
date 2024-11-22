@@ -13,12 +13,14 @@ resource "azurerm_storage_container" "blob_container" {
 }
 
 resource "azurerm_role_assignment" "service_binding" {
+  count                = var.service_principal_id != null ? 1 : 0
   scope                = resource.azurerm_storage_container.blob_container.resource_manager_id
   role_definition_name = "Storage Blob Data Reader"
   principal_id         = var.service_principal_id
 }
 
 resource "azurerm_role_assignment" "user_binding" {
+  count                = var.user_principal_id != null ? 1 : 0
   scope                = resource.azurerm_storage_container.blob_container.resource_manager_id
   role_definition_name = "Storage Blob Data Reader"
   principal_id         = var.user_principal_id
