@@ -1,3 +1,5 @@
+# We declare the different variables
+
 variable "github_handle" {
   type        = string
   nullable    = false

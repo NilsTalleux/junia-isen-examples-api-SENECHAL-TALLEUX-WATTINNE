@@ -1,3 +1,5 @@
+# We expose what we need from oub blob storage
+
 output "blob_container_url" {
   description = "The URL of the blob container."
   value       = azurerm_storage_container.blob_container.id

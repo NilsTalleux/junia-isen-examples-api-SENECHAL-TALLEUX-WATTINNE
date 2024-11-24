@@ -1,3 +1,4 @@
+# We declare the flexible SQL server
 resource "azurerm_postgresql_flexible_server" "postgresql_server" {
   name                = var.server_name
   location            = var.location
