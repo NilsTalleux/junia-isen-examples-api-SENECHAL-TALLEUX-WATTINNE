@@ -55,3 +55,9 @@ to delete generated components:
 ```bash
 terraform destroy
 ```
+
+
+
+# Issues : 
+
+Due to some restrictions on my firewall, even when deactivating it, i had an error saying connection reset "nill" and was unable to create anything on azure for most of the project.

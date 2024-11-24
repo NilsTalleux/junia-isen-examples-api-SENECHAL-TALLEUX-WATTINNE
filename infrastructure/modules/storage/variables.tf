@@ -1,3 +1,5 @@
+#We declare the variables
+
 variable "storage_account_name" {
   description = "Name of the Storage Account (must be globally unique)."
   type        = string

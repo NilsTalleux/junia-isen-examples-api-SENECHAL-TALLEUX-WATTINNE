@@ -59,3 +59,10 @@ def read_quotes():
         raise HTTPException(status_code=500, detail=str(error))
 
     return {"quotes": quotes}
+
+def init_db(conn):
+    # We need to create the table before we can insert data
+    file_path = './examples/example.sql'
+    # Read the SQL file and initialize the database
+    with open(file_path, 'r') as file:
+        conn.cursor().execute(file.read())

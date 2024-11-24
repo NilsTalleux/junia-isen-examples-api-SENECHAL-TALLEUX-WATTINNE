@@ -1,3 +1,5 @@
+# We expose the different variables needed
+
 output "db_server_fqdn" {
   description = "The fully qualified domain name of the PostgreSQL server"
   value       = azurerm_postgresql_flexible_server.postgresql_server.fqdn

@@ -1,3 +1,5 @@
+# We declare our structure terraform will create and handle
+
 data "azurerm_subscription" "current" {
 }
 

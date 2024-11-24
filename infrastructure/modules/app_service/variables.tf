@@ -1,3 +1,5 @@
+# This file declares the variables used for the app service
+
 variable "app_service_plan_name" {
   description = "Name of the App Service Plan"
   type        = string

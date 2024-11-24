@@ -1,3 +1,5 @@
+# We declare the variables needed for the database
+
 variable "server_name" {
   description = "The name of the PostgreSQL server"
   type        = string

@@ -56,3 +56,9 @@ They go on:
 - http://localhost:8000/docs
 - http://localhost:8000/
 - http://localhost:8000/examples
+
+# Documention
+
+Lors de ce projet des restrictions (Junia) et aussi des erreurs liées au firewall on perturbé la création de ressources auprès d'azure.
+Les tests pythons sont réalisés mais pour ce qui concerne docker impossible pour nous de vérifier si cela fonctionne où non.
+De plus, au tout début un commit ne respectait pas la norme karma, pour respecter cette norme le commit a été modifié, ce qui a impacté tous les commits suivants qui ont été reliés en un bloc.
