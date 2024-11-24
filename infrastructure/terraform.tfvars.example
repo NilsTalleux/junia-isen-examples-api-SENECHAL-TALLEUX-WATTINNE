@@ -7,7 +7,7 @@ email_address           = "@*.junia.com"            # Junia email address
 
 # Only contain alphanumeric characters and dashes,
 # up to 60 characters in length and MUST BE UNIQUE
-app_service_name        = "LinuxWebApppcntbw"       # Optional: name of the app-service 
+app_service_name        = "linuxwebapppcntbw"       # Optional: name of the app-service 
 storage_account_name    = "storageaccountccppsntbw" # Optional : name of the Storage Account (MUST BE UNIQUE) 
 
 db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL server (MUST BE UNIQUE)
