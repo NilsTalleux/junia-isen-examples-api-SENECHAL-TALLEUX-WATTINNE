@@ -22,7 +22,7 @@ email_address           = "@*.junia.com"            # Junia email address
 # Only contain alphanumeric characters and dashes,
 # up to 60 characters in length and MUST BE UNIQUE
 # More info: https://learn.microsoft.com/en-us/answers/questions/1150735/app-service-name-is-not-available-only-for-some-te?orderBy=Newest
-app_service_name        = "LinuxWebApppcntbw"       # Optional: name of the app-service
+app_service_name        = "linuxwebapppcntbw"       # Optional: name of the app-service
 storage_account_name    = "storageaccountccppsntbw" # Optional : name of the Storage Account (MUST BE UNIQUE)
 
 db_server_name          = "ccproject-psntbw"        # Name of the PostgreSQL server (MUST BE UNIQUE)

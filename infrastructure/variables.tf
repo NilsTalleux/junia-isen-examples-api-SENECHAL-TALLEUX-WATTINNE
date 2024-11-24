@@ -36,7 +36,7 @@ variable "app_service_plan_name" {
 variable "app_service_name" {
   description = "Name of the App Service (MUST BE UNIQUE)"
   type        = string
-  default     = "LinuxWebApppcntbw"
+  default     = "linuxwebapppcntbw"
 }
 
 variable "app_service_pricing_plan" {
