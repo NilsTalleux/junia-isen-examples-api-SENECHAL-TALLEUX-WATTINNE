@@ -1,11 +1,13 @@
 name: Build and Deploy Docker Image
 
-on:
-  push:
-    branches: ["main"]
+on: # Il nous est demandé de déclencher le workflow lorsqu'on merge avec le main, 
+  pull_request: # donc uniquement quand on ferme une pull request (validée) et non pas quand on push dans le main directement
+    types: [closed]
+    branches: [main]
 
 jobs:
-  build:
+  build:  # On vérifie que ça soit bien mergé avec le main
+    if: github.event.pull_request.merged == true 
     runs-on: ubuntu-latest
 
     steps:
