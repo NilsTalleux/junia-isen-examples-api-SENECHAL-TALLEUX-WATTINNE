@@ -29,6 +29,12 @@ module "resource_group" {
   resource_group_location = var.resource_group_location
 }
 
+module "vnet" {
+  source = "./modules/vnet"
+  resource_group_name = var.resource_group_name #local.resource_group
+  location            = var.resource_group_location #local.location
+}
+
 module "app_service" {
   source                = "./modules/app_service"
   app_service_plan_name = var.app_service_plan_name
