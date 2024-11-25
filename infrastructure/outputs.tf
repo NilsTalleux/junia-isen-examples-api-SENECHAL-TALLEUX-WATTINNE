@@ -46,3 +46,8 @@ output "storage" {
   }
   description = "URL to access the storage account"
 }
+
+output "subnet_ids" {
+  description = "The IDs of the created subnets"
+  value       = module.vnet.subnet_ids
+}
